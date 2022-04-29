@@ -170,8 +170,8 @@
     })();
 
     var board = new Board(1500, 600);
-    var bar = new Bar(20, 250, 40, 100, board);
-    var bar_2 = new Bar(1440, 250, 40, 100, board);
+    var bar = new Bar(20, 250, 20, 100, board);
+    var bar_2 = new Bar(1460, 250, 20, 100, board);
     var canvas = document.getElementById('canvas');
     var board_view = new BoardView(canvas, board);
     var ball = new Ball(750, 300, 10, board);
