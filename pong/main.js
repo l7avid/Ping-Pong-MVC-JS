@@ -98,6 +98,9 @@
             this.canvas.height = board.height;
             this.board = board;
             this.ctx = canvas.getContext("2d");
+            this.ctx.strokeStyle = "#FF0000";
+
+
         }
 
         self.BoardView.prototype = {
@@ -157,7 +160,8 @@
         function draw(ctx, element) {
             switch (element.kind) {
                 case "rectangle":
-                    ctx.fillRect(element.x, element.y, element.width, element.height);
+                    //ctx.fillRect(element.x, element.y, element.width, element.height);
+                    ctx.strokeRect(element.x, element.y, element.width, element.height);
                     break;
                 case "circle":
                     ctx.beginPath();
@@ -174,7 +178,7 @@
     var bar_2 = new Bar(1460, 250, 20, 100, board);
     var canvas = document.getElementById('canvas');
     var board_view = new BoardView(canvas, board);
-    var ball = new Ball(750, 300, 10, board);
+    var ball = new Ball(750, 300, 9, board);
 
 
     document.addEventListener("keydown", function (ev) {
